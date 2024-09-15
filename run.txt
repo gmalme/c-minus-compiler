@@ -1,0 +1,6 @@
+bison -d parser.y
+flex lexer.l
+gcc -o analisador parser.tab.c lex.yy.c -lfl
+
+./analisador < testes_semantico/teste1.c
+./analisador < testes_semantico/teste2.c
